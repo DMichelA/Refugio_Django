@@ -1,7 +1,8 @@
 from django.urls import path,include
 
-from apps.adopcion.views import index_adopcion
+from apps.adopcion.views import SolicitudList, SolicitudCreate
 
 urlpatterns = [
-    path('index/', index_adopcion, name="adopcion"),
+    path('solicitud/listar/', SolicitudList.as_view(), name="solicitud_listar"),
+    path('solicitud/nueva/', SolicitudCreate.as_view(), name="solicitud_crear"),
 ]
