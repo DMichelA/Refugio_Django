@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="POST">
+    <!-- Token de seguridad, debe ir en todos los formularios -->
+    {% csrf_token %}
+    <!-- Se va pintar con etiquetas p -->
+    {{ form.as_p }} 
+
+    <button class="btn btn-success" type="submit">Guardar</button>
+</form>
+{% endblock %}
