@@ -47,6 +47,7 @@ class MascotaList(ListView):
     model = Mascota
     template_name = 'mascota/mascota_list.hmtl'
     paginate_by = 5
+    ordering = ['id']
 
 class MascotaCreate(CreateView):
     model = Mascota
